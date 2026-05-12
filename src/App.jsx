@@ -10,7 +10,7 @@ function App() {
     <>
         <div className="terminal-input">
         <h3 className="prompt">
-            Omarshell@omarportfolio: ~$
+            Omarshell@omarportfolio:~$
             <span className="command">omar -h</span>
         </h3>
 
@@ -34,7 +34,7 @@ function App() {
 
     </div>
     </div>
-    <h3>Omarshell@omarportfolio: ~/projects$ ls</h3>
+    <h3>Omarshell@omarportfolio:<span className="command">~/projects$ ls</span></h3>
 
                 <div className="projects">
                     {projects.map((project) => {
@@ -48,7 +48,7 @@ function App() {
                     })}
             </div>
             <div className="command">
-    <h3>Omarshell@omarportfolio: ~$ which interests</h3>
+    <h3>Omarshell@omarportfolio:~$<span className="command">which --interests</span></h3>
 
             <pre className="info">
             - JavaScript / TypeScript
@@ -57,7 +57,7 @@ function App() {
             </pre>
             </div>
             <div className="command">
-    <h3>Omarshell@omarportfolio: ~$ contact</h3>
+    <h3>Omarshell@omarportfolio:~$<span className="command">contacts --info</span></h3>
 
                 <pre className="info">
                 🤝 Connect With Me
