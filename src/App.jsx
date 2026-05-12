@@ -1,71 +1,51 @@
 import { useState } from 'react'
+import projects from './projects'
+import {ascii, systemInfo} from './ascii'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [query, setQuery] = useState("")
 
   return (
     <>
-    <section>
-        <div>
-            <p>
-                Searching...
-                <span></span>
-            </p>
+        <div className="terminal-input">
+        <h3 className="prompt">
+            Omarshell@omarportfolio: ~$
+            <span className="command">omar -h</span>
+        </h3>
+
+        <div className="input-line">
+
+            <input
+            type="text"
+            placeholder="Type a command..."
+            />
+
+            <span className="cursor">█</span>
         </div>
-    </section>
-    <h3>Omarshell@omarportfolio: ~$ omar -h </h3>
+    </div>
                 <div className="terminal">
-                    <div className="row">
-                        <pre className="ascii">
-                ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓<br/>
-                ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓<br/>
-                ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓<br/>
-                ▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓    ▓▓▓▓<br/>
-                ▓▓▓▓▓▓▓▓▓▓  ▓▓  ▓▓▓▓▓▓▓▓<br/>
-                ▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓    ▓▓▓▓<br/>
-                ▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓  ▓▓<br/>
-                ▓▓▓▓▓▓▓▓▓▓  ▓▓  ▓▓▓▓  ▓▓<br/>
-                ▓▓▓▓▓▓    ▓▓▓▓▓▓    ▓▓▓▓<br/>
-                ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓<br/>
-                    </pre>
+  <div className="row">
 
-                    <pre className="info">
-                ┌─ SYSTEM INFO ─────────────────────┐<br/>
-                │ ◉ USER:    Omar Bougarne          │<br/>
-                │ ⚡ ROLE:    Fullstack Developer    │<br/>
-                │ ◎ LOC:     Morocco                │<br/>
-                │ ✉ MAIL:    bougarneomardev@gmail  │<br/>
-                ├─ STATUS ──────────────────────────┤<br/>
-                │ ◈ STACK:   JavaScript             │<br/>
-                │ ↗ LEARN:   JS / TS                │<br/>
-                │ ⚘ SEEK:    fun in programming  │<br/>
-                │ ◑ HOBBY:   Linux distros          │<br/>
-                └───────────────────────────────────┘<br/>
-                    </pre>
-                </div>
-            </div>
-            <div className="command">
+    <pre className="ascii">
+      {ascii}
+      </pre>
+    <pre className="info">{systemInfo}</pre>
+
+    </div>
+    </div>
     <h3>Omarshell@omarportfolio: ~/projects$ ls</h3>
+
                 <div className="projects">
-                    <div className="project-row">
-                        <span className="name">Ecommerce App</span>
-                        <span className="stack">React + Node</span>
-                        <span className="desc">Fullstack store system</span>
-                    </div>
-
-                    <div className="project-row">
-                        <span className="name">Portfolio CLI</span>
-                        <span className="stack">React</span>
-                        <span className="desc">Terminal-style portfolio</span>
-                    </div>
-
-                    <div className="project-row">
-                        <span className="name">AI Newsletter </span>
-                        <span className="stack">Next.js</span>
-                        <span className="desc">Customizable AI news for you</span>
-                    </div>
-                    </div>
+                    {projects.map((project) => {
+                        return(
+                            <div className="project-row" key={project.name}>
+                                <span>{project.name}</span>
+                                <span>{project.stack}</span>
+                                <span>{project.desc}</span>
+                            </div>
+                        )
+                    })}
             </div>
             <div className="command">
     <h3>Omarshell@omarportfolio: ~$ which interests</h3>
@@ -73,9 +53,7 @@ function App() {
             <pre className="info">
             - JavaScript / TypeScript
             - Linux & system tinkering
-            - Fullstack development
-            - AI tools & automation
-            - Finance in tech (learning phase)
+            - Fullstack Web&Mobile development
             </pre>
             </div>
             <div className="command">
