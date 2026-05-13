@@ -57,8 +57,22 @@ function App() {
             </pre>
             </div>
             <div className="command">
-    <h3>Omarshell@omarportfolio:~$<span className="command">contacts --info</span></h3>
+    <h3>Omarshell@omarportfolio:~$<span className="command">experiences ls</span></h3>
 
+                <pre className="info">
+                💼 Professional Experinces
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                </pre>
+            </div>
+            <div className="command">
+                <h3>Omarshell@omarportfolio:~$<span className="command">contact --info</span></h3>
                 <pre className="info">
                 🤝 Connect With Me
                 <div>
@@ -68,7 +82,7 @@ function App() {
                 💼 LinkedIn: linkedin.com/in/omar-bougarne
                 </div>
                 <div>
-                🐙 GitHub: @omarbougarne
+                📦 GitHub: @omarbougarne
                 </div>
                 <div>
                 📧 Email: bougarneomardev@gmail.com
