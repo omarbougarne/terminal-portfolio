@@ -155,12 +155,12 @@ h3 {
 }
 
 .info a {
-  color: #818cf8;
-  text-decoration: none;
+  color: #8f8ff2;
+  text-decoration: underline;
 }
 
 .info a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 @keyframes blink {
     50% { opacity: 0; }
