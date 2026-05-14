@@ -165,7 +165,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Connect With Me
 
-- 🌐 Portfolio: [your-portfolio-url.netlify.app](https://your-portfolio-url.netlify.app)
+- 🌐 Portfolio: [https://terminal-portfolio-xgns.vercel.app/](https://terminal-portfolio-xgns.vercel.app/)
 - 💼 LinkedIn: [Omar Bougarne](https://www.linkedin.com/in/omar-bougarne-886691327/)
 - 🐙 GitHub: [@omarbougarne](https://github.com/omarbougarne)
 - 📧 Email: <bougarneomardev@gmail.com>
